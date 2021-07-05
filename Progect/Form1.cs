@@ -59,14 +59,6 @@ namespace Progect
             }
 
 
-
-
-
-
-
-
-
-
             //var api_group = new VkApi();
             //// обработать исключения!
             //api_group.Authorize(new ApiAuthParams
