@@ -57,7 +57,6 @@ namespace Progect
             }
             return token;
         }
-
         static void Main(string[] args)
         {
             var api_group = new VkApi();
@@ -96,7 +95,6 @@ namespace Progect
             var get = api_user.Wall.Get(new WallGetParams());
             foreach (var wallPosts in get.WallPosts)
                 Console.WriteLine(Encoding.Default.GetString(Encoding.UTF8.GetBytes(wallPosts.Text)));
-
         }
     }
 }
