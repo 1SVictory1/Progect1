@@ -38,11 +38,6 @@ namespace Progect
             return token;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         //получить токен из файла
         public static string getAuthForUser()
         {
@@ -98,10 +93,10 @@ namespace Progect
                 Console.WriteLine(user.FirstName);
 
 
-            //var get = api_user.Wall.Get(new WallGetParams());
-            //foreach (var wallPosts in get.WallPosts)
-            //    Console.WriteLine(Encoding.Default.GetString(Encoding.UTF8.GetBytes(wallPosts.Text)));
-            
+            var get = api_user.Wall.Get(new WallGetParams());
+            foreach (var wallPosts in get.WallPosts)
+                Console.WriteLine(Encoding.Default.GetString(Encoding.UTF8.GetBytes(wallPosts.Text)));
+
         }
     }
 }
