@@ -36,9 +36,18 @@ namespace Progect
                     Console.WriteLine(r.Message);
                 }
             }
-            else if (grupp.Checked = true)
+            else if (grupp.Checked == true)
             {
-
+                var API_group = new VkApi();
+                try
+                {
+                    API_group.Authorize(new ApiAuthParams
+                    { AccessToken = aut.getAuthForGroups() });
+                }
+                catch (Exception r)
+                {
+                    Console.WriteLine(r.Message);
+                }
             }
 
 
