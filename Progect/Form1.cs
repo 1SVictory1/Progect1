@@ -20,26 +20,7 @@ namespace Progect
         {
             InitializeComponent();
         }
-        // получить токен из файла
-        public static string getAuthForGroup()
-        {
-            string token = "";
-            try
-            {
-                using (StreamReader sr = new StreamReader(@"token.txt"))
-                {
-                    token = sr.ReadLine();
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            return token;
-        }
-
-        //получить токен из файла
-        public static string getAuthForUser()
+        public string getAuthForUser()
         {
             string fileName = @"token.txt";
             string token = "";
@@ -57,14 +38,14 @@ namespace Progect
             }
             return token;
         }
-        static void Main(string[] args)
+        private void button1_Click(object sender, EventArgs e)
         {
             var api_group = new VkApi();
             // обработать исключения!
             api_group.Authorize(new ApiAuthParams
             {
-                AccessToken = getAuthForGroup()
-            });
+                AccessToken = getAuthForUser()
+            }); ;
 
             // получит запись со стены (для пользователя)
             var api_user = new VkApi();
