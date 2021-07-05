@@ -38,7 +38,6 @@ namespace Progect
                 {
                     Console.WriteLine(r.Message);
                 }
-                MessageBox.Show("Успех");
                 this.Hide();
                 fr2.Show();
             }
@@ -54,7 +53,6 @@ namespace Progect
                 {
                     Console.WriteLine(r.Message);
                 }
-                MessageBox.Show("Успех");
                 this.Hide();
                 fr2.Show();
 

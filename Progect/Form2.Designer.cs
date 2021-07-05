@@ -33,6 +33,7 @@ namespace Progect
             this.druz = new System.Windows.Forms.RadioButton();
             this.vivod = new System.Windows.Forms.Button();
             this.pole = new System.Windows.Forms.ListBox();
+            this.dalee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // uch
@@ -80,11 +81,23 @@ namespace Progect
             this.pole.Size = new System.Drawing.Size(312, 446);
             this.pole.TabIndex = 7;
             // 
+            // dalee
+            // 
+            this.dalee.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dalee.Location = new System.Drawing.Point(641, 409);
+            this.dalee.Name = "dalee";
+            this.dalee.Size = new System.Drawing.Size(126, 49);
+            this.dalee.TabIndex = 8;
+            this.dalee.Text = "далее";
+            this.dalee.UseVisualStyleBackColor = true;
+            this.dalee.Click += new System.EventHandler(this.dalee_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 487);
+            this.Controls.Add(this.dalee);
             this.Controls.Add(this.pole);
             this.Controls.Add(this.vivod);
             this.Controls.Add(this.uch);
@@ -102,5 +115,6 @@ namespace Progect
         private System.Windows.Forms.RadioButton druz;
         private System.Windows.Forms.Button vivod;
         private System.Windows.Forms.ListBox pole;
+        private System.Windows.Forms.Button dalee;
     }
 }

@@ -27,26 +27,34 @@ namespace Progect
             vivod.Enabled = false;
         }
         Autoriz aut = new Autoriz();
+        Form3 fr3 = new Form3();
         private void vivod_Click(object sender, EventArgs e)
         {
             pole.Items.Clear();
             var API_group = new VkApi();
             var API_user = new VkApi();
+           
             if (druz.Checked == true)
             {
-                API_user.Authorize(new ApiAuthParams
+                
+                API_user.Authorize(new ApiAuthParams  // Сань, разберись, почему не считывает
                 { AccessToken = aut.getAuthForUser() });
-                var friend = API_user.Friends.Get(new RegPar.FriendsGetParams
-                { Fields = VkNet.Enums.Filters.ProfileFields.All });
+                var friend = API_user.Friends.Get(new VkNet.Model.RequestParams.FriendsGetParams
+                {
+                    Fields = VkNet.Enums.Filters.ProfileFields.All
+                });
                 foreach (User user in friend)
                     pole.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName)));
             }
             if (uch.Checked == true)
             {
-                API_group.Authorize(new ApiAuthParams
+                API_group.Authorize(new ApiAuthParams    // Тут тоже
                 { AccessToken = aut.getAuthForGroups() });
-                var follow = API_group.Groups.GetMembers(new RegPar.GroupsGetMembersParams() 
-                { GroupId = "204387665", Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl });
+                var follow = API_group.Groups.GetMembers(new GroupsGetMembersParams()
+                {
+                    GroupId = "204387665",
+                    Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl
+                });
                 foreach (User user in follow)
                     pole.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName)));
             }
@@ -54,7 +62,7 @@ namespace Progect
 
         private void druz_CheckedChanged(object sender, EventArgs e)
         {
-            if ((uch.Checked == true || druz.Checked == true))
+            if (uch.Checked == true || druz.Checked == true)
             {
                 vivod.Enabled = true;
             }
@@ -70,5 +78,10 @@ namespace Progect
             else vivod.Enabled = false;
         }
 
+        private void dalee_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fr3.Show();
+        }
     }
 }
