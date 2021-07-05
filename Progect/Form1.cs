@@ -20,7 +20,7 @@ namespace Progect
         {
             InitializeComponent();
         }
-        Autoriz autoriz = new Autoriz();
+        Autoriz aut = new Autoriz();
         private void button1_Click(object sender, EventArgs e)
         {
             if (pol.Checked == true)
@@ -29,14 +29,17 @@ namespace Progect
                 try
                 {
                     API_user.Authorize(new ApiAuthParams
-                    { AccessToken = Autoriz.getAuthForUser()});
+                    { AccessToken = aut.getAuthForUser()});
                 }
                 catch (Exception r)
                 {
                     Console.WriteLine(r.Message);
                 }
             }
+            else if (grupp.Checked = true)
+            {
 
+            }
 
 
 

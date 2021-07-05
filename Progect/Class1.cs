@@ -27,5 +27,23 @@ namespace Progect
             }
             return token;
         }
+        public string getAuthForGroups()
+        {
+            string fileName = @"token.txt";
+            string token = "";
+            try
+            {
+                using (StreamReader sr = new StreamReader(fileName))
+                {
+                    sr.ReadLine();
+                    token = sr.ReadLine();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return token;
+        }
     }
 }
