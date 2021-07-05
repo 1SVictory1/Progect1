@@ -19,8 +19,11 @@ namespace Progect
         public Form1()
         {
             InitializeComponent();
+            pol.Checked = true;
+            button1.Enabled = false;
         }
         Autoriz aut = new Autoriz();
+        Form2 fr2 = new Form2();
         private void button1_Click(object sender, EventArgs e)
         {
             if (pol.Checked == true)
@@ -35,6 +38,9 @@ namespace Progect
                 {
                     Console.WriteLine(r.Message);
                 }
+                MessageBox.Show("Успех");
+                this.Hide();
+                fr2.Show();
             }
             else if (grupp.Checked == true)
             {
@@ -48,6 +54,10 @@ namespace Progect
                 {
                     Console.WriteLine(r.Message);
                 }
+                MessageBox.Show("Успех");
+                this.Hide();
+                fr2.Show();
+
             }
 
 
@@ -100,6 +110,15 @@ namespace Progect
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void sogl_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((pol.Checked == true || grupp.Checked == true) & sogl.Checked == true)
+            {
+                button1.Enabled = true;
+            }
+            else button1.Enabled = false;
         }
     }
 }
