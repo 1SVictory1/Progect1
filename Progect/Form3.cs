@@ -20,6 +20,7 @@ namespace Progect
         List<string> _users;
         String[] Users;
         List<string> _users_id;
+        int Number_user;
         public Form3(string pol, string group, List<string> users, List<string> users_id)
         {
             InitializeComponent();
@@ -34,7 +35,6 @@ namespace Progect
 
         private void nazad_Click(object sender, EventArgs e)
         {
-
             Form fr3 = new Form2(_pol, _group);
             this.Hide();
             fr3.Show();
@@ -42,14 +42,16 @@ namespace Progect
 
         private void button1_Click(object sender, EventArgs e)
         {
+            textBox1.Clear();
+            Number_user = comboBox1.SelectedIndex;
             var API_user = new VkApi();
             API_user.Authorize(new ApiAuthParams
             { AccessToken = _pol });
             var Wall = API_user.Wall.Get(new WallGetParams
             {
-                OwnerId = 379204040,
+                OwnerId = Convert.ToInt32(_users_id[Number_user]),
                 Extended = true,
-                Count = 1
+                Count = 10
             });
             foreach (VkNet.Model.Attachments.Post Post in Wall.WallPosts)
             {
