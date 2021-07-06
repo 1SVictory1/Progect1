@@ -15,9 +15,13 @@ namespace Progect
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        string f2_pol;
+        string f2_group;
+        public Form3(string pol, string group)
         {
             InitializeComponent();
+            f2_pol = pol;
+            f2_group = group;
         }
         Form2 fr2 = new Form2();
 
@@ -32,7 +36,7 @@ namespace Progect
         {
             var API_user = new VkApi();
             API_user.Authorize(new ApiAuthParams
-            { AccessToken = Autoriz.getAuthForUser() });
+            { AccessToken = f2_pol });
             var Wall = API_user.Wall.Get(new WallGetParams
             {
                 OwnerId = 379204040,
@@ -49,7 +53,7 @@ namespace Progect
         {
             var API_group = new VkApi();
             API_group.Authorize(new ApiAuthParams
-            { AccessToken = Autoriz.getAuthForGroups() });
+            { AccessToken = f2_group });
             var Wall = API_group.Wall.Get(new WallGetParams
             {
                 OwnerId = 205674020,
