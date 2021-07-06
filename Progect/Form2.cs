@@ -43,6 +43,7 @@ namespace Progect
             var API_user = new VkApi();
             int count = 0;
             string _user;
+
             if (druz.Checked == true)
             {
                 count = 0;
@@ -60,11 +61,8 @@ namespace Progect
                     _user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
                     pole.Text += _user;
                     _users.Add(_user);
+                    _users_id.Add(user.Id.ToString());
                     count++;
-                }
-                foreach (User user_id in friend)
-                {
-                    _users_id.Add(user_id.Id.ToString());
                 }
             }
             if (uch.Checked == true)
