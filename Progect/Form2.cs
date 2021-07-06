@@ -37,7 +37,7 @@ namespace Progect
             if (druz.Checked == true)
             {
                 
-                API_user.Authorize(new ApiAuthParams  // Сань, разберись, почему не считывает
+                API_user.Authorize(new ApiAuthParams  
                 { AccessToken = Autoriz.getAuthForUser() });
                 var friend = API_user.Friends.Get(new VkNet.Model.RequestParams.FriendsGetParams
                 {
@@ -48,8 +48,7 @@ namespace Progect
             }
             if (uch.Checked == true)
             {
-                MessageBox.Show(Autoriz.getAuthForGroups());
-                API_group.Authorize(new ApiAuthParams    // Тут тоже
+                API_group.Authorize(new ApiAuthParams    
                 { AccessToken = Autoriz.getAuthForGroups() });
                 var follow = API_group.Groups.GetMembers(new GroupsGetMembersParams()
                 {

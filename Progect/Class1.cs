@@ -11,7 +11,7 @@ namespace Progect
     {
         public static string getAuthForUser()
         {
-            string fileName = @"C:/Users/alexa/source/repos/Git/Progect/auth_VK.txt";
+            string fileName = @"C:/Users/alexa/source/repos/Progect1/Progect/auth_VK.txt";
             string token = "";
             try
             {
@@ -28,7 +28,7 @@ namespace Progect
         }
         public static string getAuthForGroups()
         {
-            string fileName = @"C:/Users/alexa/source/repos/Git/Progect/auth_VK.txt";
+            string fileName = @"C:/Users/alexa/source/repos/Progect1/Progect/auth_VK.txt";
             string token = "";
             try
             {
