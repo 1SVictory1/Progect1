@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System; 
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,10 +30,13 @@ namespace Progect
 
         private void vivod_Click(object sender, EventArgs e)
         {
-            pole.Items.Clear();
+            pole.Clear();
             var API_group = new VkApi();
             var API_user = new VkApi();
-           
+            int user_count = 0;
+            int group_count = 0;
+            int count = 0;
+
             if (druz.Checked == true)
             {
                 
@@ -44,7 +47,10 @@ namespace Progect
                     Fields = VkNet.Enums.Filters.ProfileFields.All
                 });
                 foreach (User user in friend)
-                    pole.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName)));
+                {
+                    pole.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
+                    user_count++;
+                }     
             }
             if (uch.Checked == true)
             {
@@ -56,8 +62,12 @@ namespace Progect
                     Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl
                 });
                 foreach (User user in follow)
-                    pole.Items.Add(Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName)));
+                {
+                    pole.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
+                    user_count++;
+                }
             }
+            count = user_count + group_count;
         }
 
         private void druz_CheckedChanged(object sender, EventArgs e)

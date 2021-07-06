@@ -32,17 +32,18 @@ namespace Progect
             this.uch = new System.Windows.Forms.RadioButton();
             this.druz = new System.Windows.Forms.RadioButton();
             this.vivod = new System.Windows.Forms.Button();
-            this.pole = new System.Windows.Forms.ListBox();
             this.dalee = new System.Windows.Forms.Button();
+            this.pole = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // uch
             // 
             this.uch.AutoSize = true;
             this.uch.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.uch.Location = new System.Drawing.Point(398, 75);
+            this.uch.Location = new System.Drawing.Point(531, 92);
+            this.uch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uch.Name = "uch";
-            this.uch.Size = new System.Drawing.Size(331, 47);
+            this.uch.Size = new System.Drawing.Size(411, 58);
             this.uch.TabIndex = 5;
             this.uch.TabStop = true;
             this.uch.Text = "Список участников";
@@ -53,9 +54,10 @@ namespace Progect
             // 
             this.druz.AutoSize = true;
             this.druz.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.druz.Location = new System.Drawing.Point(398, 22);
+            this.druz.Location = new System.Drawing.Point(531, 27);
+            this.druz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.druz.Name = "druz";
-            this.druz.Size = new System.Drawing.Size(266, 47);
+            this.druz.Size = new System.Drawing.Size(329, 58);
             this.druz.TabIndex = 4;
             this.druz.TabStop = true;
             this.druz.Text = "Список друзей";
@@ -65,43 +67,47 @@ namespace Progect
             // vivod
             // 
             this.vivod.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.vivod.Location = new System.Drawing.Point(398, 142);
+            this.vivod.Location = new System.Drawing.Point(531, 175);
+            this.vivod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.vivod.Name = "vivod";
-            this.vivod.Size = new System.Drawing.Size(331, 49);
+            this.vivod.Size = new System.Drawing.Size(441, 60);
             this.vivod.TabIndex = 6;
             this.vivod.Text = "вывод";
             this.vivod.UseVisualStyleBackColor = true;
             this.vivod.Click += new System.EventHandler(this.vivod_Click);
             // 
-            // pole
-            // 
-            this.pole.FormattingEnabled = true;
-            this.pole.Location = new System.Drawing.Point(29, 12);
-            this.pole.Name = "pole";
-            this.pole.Size = new System.Drawing.Size(312, 446);
-            this.pole.TabIndex = 7;
-            // 
             // dalee
             // 
             this.dalee.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dalee.Location = new System.Drawing.Point(641, 409);
+            this.dalee.Location = new System.Drawing.Point(855, 503);
+            this.dalee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dalee.Name = "dalee";
-            this.dalee.Size = new System.Drawing.Size(126, 49);
+            this.dalee.Size = new System.Drawing.Size(168, 60);
             this.dalee.TabIndex = 8;
             this.dalee.Text = "далее";
             this.dalee.UseVisualStyleBackColor = true;
             this.dalee.Click += new System.EventHandler(this.dalee_Click);
             // 
+            // pole
+            // 
+            this.pole.Location = new System.Drawing.Point(28, 27);
+            this.pole.Multiline = true;
+            this.pole.Name = "pole";
+            this.pole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.pole.Size = new System.Drawing.Size(364, 536);
+            this.pole.TabIndex = 9;
+            // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 487);
-            this.Controls.Add(this.dalee);
+            this.ClientSize = new System.Drawing.Size(1052, 599);
             this.Controls.Add(this.pole);
+            this.Controls.Add(this.dalee);
             this.Controls.Add(this.vivod);
             this.Controls.Add(this.uch);
             this.Controls.Add(this.druz);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
             this.Text = "API VK";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -114,7 +120,7 @@ namespace Progect
         private System.Windows.Forms.RadioButton uch;
         private System.Windows.Forms.RadioButton druz;
         private System.Windows.Forms.Button vivod;
-        private System.Windows.Forms.ListBox pole;
         private System.Windows.Forms.Button dalee;
+        private System.Windows.Forms.TextBox pole;
     }
 }
