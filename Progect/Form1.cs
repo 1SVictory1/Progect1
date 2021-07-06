@@ -23,44 +23,50 @@ namespace Progect
             button1.Enabled = false;
             
         }
-        Form2 fr2 = new Form2();
+        string pol;
+        string group;
         private void button1_Click(object sender, EventArgs e)
         {
-            if (pol.Checked == true)
-            {
-                var API_user = new VkApi();
-                try
-                {
-                    API_user.Authorize(new ApiAuthParams
-                    { AccessToken = Autoriz.getAuthForUser() });
-                }
-                catch (Exception r)
-                {
-                    Console.WriteLine(r.Message);
-                }
-                this.Hide();
-                fr2.Show();
-            }
-            else if (grupp.Checked == true)
-            {
-                var API_group = new VkApi();
-                try
-                {
-                    API_group.Authorize(new ApiAuthParams
-                    { AccessToken = Autoriz.getAuthForGroups() });
-                }
-                catch (Exception r)
-                {
-                    Console.WriteLine(r.Message);
-                }
+            pol = textBox1.Text;
+            group = textBox2.Text;
+            Form fr2 = new Form2(pol, group);
+            this.Hide();
+            fr2.Show();
 
-                this.Hide();
-                fr2.Show();
-            }
+            //var API_user = new VkApi();
+            //try
+            //{
+            //    API_user.Authorize(new ApiAuthParams
+            //    { AccessToken = Autoriz.getAuthForUser() });
+            //}
+            //catch (Exception r)
+            //{
+            //    Console.WriteLine(r.Message);
+            //}
+            //this.Hide();
+            //fr2.Show();
+
+
+
+            //var API_group = new VkApi();
+            //try
+            //{
+            //    API_group.Authorize(new ApiAuthParams
+            //    { AccessToken = Autoriz.getAuthForGroups() });
+            //}
+            //catch (Exception r)
+            //{
+            //    Console.WriteLine(r.Message);
+            //}
+            //this.Hide();
+            //fr2.Show();
+
         }
+        
+
         private void sogl_CheckedChanged(object sender, EventArgs e)
         {
-            if ((pol.Checked == true || grupp.Checked == true) & sogl.Checked == true)
+            if (textBox1.Text != "" && textBox2.Text != "" && sogl.Checked == true)
             {
                 button1.Enabled = true;
             }
