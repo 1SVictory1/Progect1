@@ -105,7 +105,7 @@ namespace Progect
 
         private void dalee_Click(object sender, EventArgs e)
         {
-            Form3 fr3 = new Form3(_pol, _group, _users);
+            Form3 fr3 = new Form3(_pol, _group, _users, _users_id);
             this.Hide();
             fr3.Show();
         }
