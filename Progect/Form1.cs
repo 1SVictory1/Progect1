@@ -39,7 +39,7 @@ namespace Progect
                     Console.WriteLine(r.Message);
                 }
                 this.Hide();
-                fr2.Show();               
+                fr2.Show();                 
             }
             else if (grupp.Checked == true)
             {
