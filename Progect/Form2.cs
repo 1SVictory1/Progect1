@@ -17,6 +17,15 @@ namespace Progect
 {
     public partial class Form2 : Form
     {
+        string f1_pol;
+        string f1_group;
+        public Form2(string pol, string group)
+        {
+            InitializeComponent();
+            f1_pol = pol;
+            f1_group = group;
+        }
+
         public Form2()
         {
             InitializeComponent();
