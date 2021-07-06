@@ -23,13 +23,12 @@ namespace Progect
             f2_pol = pol;
             f2_group = group;
         }
-        Form2 fr2 = new Form2();
-
 
         private void nazad_Click(object sender, EventArgs e)
         {
+            Form fr3 = new Form2(f2_pol, f2_group);
             this.Hide();
-            fr2.Show();
+            fr3.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
