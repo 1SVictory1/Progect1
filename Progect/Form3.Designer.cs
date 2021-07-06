@@ -51,7 +51,7 @@ namespace Progect
             // 
             this.nazad.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nazad.Location = new System.Drawing.Point(34, 613);
-            this.nazad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nazad.Margin = new System.Windows.Forms.Padding(4);
             this.nazad.Name = "nazad";
             this.nazad.Size = new System.Drawing.Size(168, 60);
             this.nazad.TabIndex = 9;
@@ -63,7 +63,7 @@ namespace Progect
             // 
             this.button1.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(16, 158);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(354, 75);
             this.button1.TabIndex = 11;
@@ -75,12 +75,13 @@ namespace Progect
             // 
             this.button2.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(16, 286);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(354, 75);
             this.button2.TabIndex = 12;
             this.button2.Text = "публикации сообщества";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
@@ -101,7 +102,7 @@ namespace Progect
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nazad);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form3";
             this.Text = "API VK";
             this.ResumeLayout(false);

@@ -35,9 +35,26 @@ namespace Progect
             { AccessToken = Autoriz.getAuthForUser() });
             var Wall = API_user.Wall.Get(new WallGetParams
             {
-                OwnerId = 208242814,
+                OwnerId = 379204040,
                 Extended = true,
                 Count = 1
+            });
+            foreach (VkNet.Model.Attachments.Post Post in Wall.WallPosts)
+            {
+                textBox1.Text += $"Пост от {Post.Date}, Просмотров: {Post.Views.Count}, \r\n \r\n";
+                textBox1.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(Post.Text)) + "\r\n";
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var API_group = new VkApi();
+            API_group.Authorize(new ApiAuthParams
+            { AccessToken = Autoriz.getAuthForGroups() });
+            var Wall = API_group.Wall.Get(new WallGetParams
+            {
+                OwnerId = 205674020,
+                Extended = true,
+                Count = 3
             });
             foreach (VkNet.Model.Attachments.Post Post in Wall.WallPosts)
             {
