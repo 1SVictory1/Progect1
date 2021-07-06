@@ -42,12 +42,13 @@ namespace Progect
             pole.Clear();
             var API_group = new VkApi();
             var API_user = new VkApi();
-            int user_count = 0;
-            int group_count = 0;
             int count = 0;
+            List<string> Users = new List<string> { };
+            string _user;
 
             if (druz.Checked == true)
             {
+                count = 0;
                 API_user.Authorize(new ApiAuthParams  
                 { AccessToken = f1_pol });
                 var friend = API_user.Friends.Get(new VkNet.Model.RequestParams.FriendsGetParams
@@ -56,12 +57,15 @@ namespace Progect
                 });
                 foreach (User user in friend)
                 {
-                    pole.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
-                    user_count++;
+                    _user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
+                    pole.Text += _user;
+                    Users.Add(_user);
+                    count++;
                 }     
             }
             if (uch.Checked == true)
             {
+                count = 0;
                 API_group.Authorize(new ApiAuthParams    
                 { AccessToken = f1_group });
                 var follow = API_group.Groups.GetMembers(new GroupsGetMembersParams()
@@ -71,12 +75,13 @@ namespace Progect
                 });
                 foreach (User user in follow)
                 {
-                    pole.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
-                    user_count++;
+                    _user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
+                    pole.Text += _user;
+                    Users.Add(_user);
+                    count++;
                 }
             }
-            count = user_count + group_count;
-        }
+        } 
 
         private void druz_CheckedChanged(object sender, EventArgs e)
         {
