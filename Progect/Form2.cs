@@ -38,7 +38,7 @@ namespace Progect
             {
                 
                 API_user.Authorize(new ApiAuthParams  // Сань, разберись, почему не считывает
-                { AccessToken = aut.getAuthForUser() });
+                { AccessToken = Autoriz.getAuthForUser() });
                 var friend = API_user.Friends.Get(new VkNet.Model.RequestParams.FriendsGetParams
                 {
                     Fields = VkNet.Enums.Filters.ProfileFields.All
@@ -48,11 +48,12 @@ namespace Progect
             }
             if (uch.Checked == true)
             {
+                MessageBox.Show(Autoriz.getAuthForGroups());
                 API_group.Authorize(new ApiAuthParams    // Тут тоже
-                { AccessToken = aut.getAuthForGroups() });
+                { AccessToken = Autoriz.getAuthForGroups() });
                 var follow = API_group.Groups.GetMembers(new GroupsGetMembersParams()
                 {
-                    GroupId = "204387665",
+                    GroupId = "205674020",
                     Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl
                 });
                 foreach (User user in follow)
