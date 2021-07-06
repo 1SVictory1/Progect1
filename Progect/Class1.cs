@@ -11,7 +11,7 @@ namespace Progect
     {
         public string getAuthForUser()
         {
-            string fileName = @"auth_VK.txt";
+            string fileName = "auth_VK.txt";
             string token = "";
             try
             {

@@ -19,9 +19,9 @@ namespace Progect
         public Form1()
         {
             InitializeComponent();
-            pol.Checked = false;
+            
             button1.Enabled = false;
-            grupp.Checked = false;
+            
         }
         Autoriz aut = new Autoriz();
         private void button1_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace Progect
                     Console.WriteLine(r.Message);
                 }
                 this.Hide();
-                fr2.Show();
+                fr2.Show();               
             }
             else if (grupp.Checked == true)
             {
@@ -55,8 +55,7 @@ namespace Progect
                     Console.WriteLine(r.Message);
                 }
                 this.Hide();
-                fr2.Show();
-
+                fr2.Show();               
             }
 
 
