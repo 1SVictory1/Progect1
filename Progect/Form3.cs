@@ -18,12 +18,15 @@ namespace Progect
         string _pol;
         string _group;
         List<string> _users;
+        String[] Users;
         public Form3(string pol, string group, List<string> users)
         {
             InitializeComponent();
             _pol = pol;
             _group = group;
             _users = users;
+            Users = _users.ToArray();
+            comboBox1.Items.AddRange(Users);
         }
 
         private void nazad_Click(object sender, EventArgs e)
@@ -43,23 +46,6 @@ namespace Progect
                 OwnerId = 379204040,
                 Extended = true,
                 Count = 1
-            });
-            foreach (VkNet.Model.Attachments.Post Post in Wall.WallPosts)
-            {
-                textBox1.Text += $"Пост от {Post.Date}, Просмотров: {Post.Views.Count}, \r\n \r\n";
-                textBox1.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(Post.Text)) + "\r\n";
-            }
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            var API_group = new VkApi();
-            API_group.Authorize(new ApiAuthParams
-            { AccessToken = _group });
-            var Wall = API_group.Wall.Get(new WallGetParams
-            {
-                OwnerId = 205674020,
-                Extended = true,
-                Count = 3
             });
             foreach (VkNet.Model.Attachments.Post Post in Wall.WallPosts)
             {

@@ -32,28 +32,28 @@ namespace Progect
             this.label1 = new System.Windows.Forms.Label();
             this.nazad = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(177, 14);
+            this.label1.Location = new System.Drawing.Point(271, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(682, 65);
+            this.label1.Size = new System.Drawing.Size(568, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "Управление публикациями";
             // 
             // nazad
             // 
             this.nazad.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nazad.Location = new System.Drawing.Point(38, 766);
-            this.nazad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.nazad.Location = new System.Drawing.Point(34, 613);
+            this.nazad.Margin = new System.Windows.Forms.Padding(4);
             this.nazad.Name = "nazad";
-            this.nazad.Size = new System.Drawing.Size(189, 75);
+            this.nazad.Size = new System.Drawing.Size(168, 60);
             this.nazad.TabIndex = 9;
             this.nazad.Text = "назад";
             this.nazad.UseVisualStyleBackColor = true;
@@ -62,47 +62,43 @@ namespace Progect
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(18, 198);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(87, 438);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(398, 94);
+            this.button1.Size = new System.Drawing.Size(354, 75);
             this.button1.TabIndex = 11;
             this.button1.Text = "публикации пользователя";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(18, 358);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(398, 94);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "публикации сообщества";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(471, 145);
+            this.textBox1.Location = new System.Drawing.Point(688, 116);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(533, 350);
+            this.textBox1.Size = new System.Drawing.Size(408, 374);
             this.textBox1.TabIndex = 13;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(112, 116);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(329, 24);
+            this.comboBox1.TabIndex = 14;
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1059, 860);
+            this.ClientSize = new System.Drawing.Size(1136, 688);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nazad);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "API VK";
@@ -116,7 +112,7 @@ namespace Progect
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button nazad;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
