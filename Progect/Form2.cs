@@ -54,8 +54,6 @@ namespace Progect
                     Fields = VkNet.Enums.Filters.ProfileFields.All
                 });
 
-                var friend_id = API_user.Friends.GetAppUsers();
-
                 foreach (User user in friend)
                 {
                     _user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));

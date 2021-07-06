@@ -31,6 +31,7 @@ namespace Progect
 
         private void nazad_Click(object sender, EventArgs e)
         {
+
             Form fr3 = new Form2(_pol, _group);
             this.Hide();
             fr3.Show();
