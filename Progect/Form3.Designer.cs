@@ -62,22 +62,23 @@ namespace Progect
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(87, 438);
+            this.button1.Location = new System.Drawing.Point(60, 439);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(354, 75);
+            this.button1.Size = new System.Drawing.Size(476, 75);
             this.button1.TabIndex = 11;
-            this.button1.Text = "публикации пользователя";
+            this.button1.Text = "Вывести публикации пользователя";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(688, 116);
+            this.textBox1.Location = new System.Drawing.Point(624, 89);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(408, 374);
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(500, 448);
             this.textBox1.TabIndex = 13;
             // 
             // comboBox1
