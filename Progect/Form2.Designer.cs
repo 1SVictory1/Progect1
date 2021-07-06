@@ -40,10 +40,10 @@ namespace Progect
             // 
             this.uch.AutoSize = true;
             this.uch.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.uch.Location = new System.Drawing.Point(597, 115);
-            this.uch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uch.Location = new System.Drawing.Point(531, 92);
+            this.uch.Margin = new System.Windows.Forms.Padding(4);
             this.uch.Name = "uch";
-            this.uch.Size = new System.Drawing.Size(495, 69);
+            this.uch.Size = new System.Drawing.Size(411, 58);
             this.uch.TabIndex = 5;
             this.uch.TabStop = true;
             this.uch.Text = "Список участников";
@@ -54,10 +54,10 @@ namespace Progect
             // 
             this.druz.AutoSize = true;
             this.druz.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.druz.Location = new System.Drawing.Point(597, 34);
-            this.druz.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.druz.Location = new System.Drawing.Point(531, 27);
+            this.druz.Margin = new System.Windows.Forms.Padding(4);
             this.druz.Name = "druz";
-            this.druz.Size = new System.Drawing.Size(398, 69);
+            this.druz.Size = new System.Drawing.Size(329, 58);
             this.druz.TabIndex = 4;
             this.druz.TabStop = true;
             this.druz.Text = "Список друзей";
@@ -67,10 +67,10 @@ namespace Progect
             // vivod
             // 
             this.vivod.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.vivod.Location = new System.Drawing.Point(597, 219);
-            this.vivod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.vivod.Location = new System.Drawing.Point(531, 175);
+            this.vivod.Margin = new System.Windows.Forms.Padding(4);
             this.vivod.Name = "vivod";
-            this.vivod.Size = new System.Drawing.Size(496, 75);
+            this.vivod.Size = new System.Drawing.Size(441, 60);
             this.vivod.TabIndex = 6;
             this.vivod.Text = "вывод";
             this.vivod.UseVisualStyleBackColor = true;
@@ -79,10 +79,10 @@ namespace Progect
             // dalee
             // 
             this.dalee.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dalee.Location = new System.Drawing.Point(962, 629);
-            this.dalee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dalee.Location = new System.Drawing.Point(855, 503);
+            this.dalee.Margin = new System.Windows.Forms.Padding(4);
             this.dalee.Name = "dalee";
-            this.dalee.Size = new System.Drawing.Size(189, 75);
+            this.dalee.Size = new System.Drawing.Size(168, 60);
             this.dalee.TabIndex = 8;
             this.dalee.Text = "далее";
             this.dalee.UseVisualStyleBackColor = true;
@@ -90,25 +90,24 @@ namespace Progect
             // 
             // pole
             // 
-            this.pole.Location = new System.Drawing.Point(32, 34);
-            this.pole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pole.Location = new System.Drawing.Point(28, 27);
             this.pole.Multiline = true;
             this.pole.Name = "pole";
             this.pole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.pole.Size = new System.Drawing.Size(409, 669);
+            this.pole.Size = new System.Drawing.Size(364, 536);
             this.pole.TabIndex = 9;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 749);
+            this.ClientSize = new System.Drawing.Size(1052, 599);
             this.Controls.Add(this.pole);
             this.Controls.Add(this.dalee);
             this.Controls.Add(this.vivod);
             this.Controls.Add(this.uch);
             this.Controls.Add(this.druz);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "API VK";

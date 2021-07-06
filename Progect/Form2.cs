@@ -26,6 +26,7 @@ namespace Progect
             _group = group;
         }
         List<string> _users = new List<string> { };
+        List<string> _users_id = new List<string> { };
         public Form2()
         {
             InitializeComponent();
@@ -35,8 +36,6 @@ namespace Progect
         {
             vivod.Enabled = false;
         }
-        Autoriz aut = new Autoriz();
-
         private void vivod_Click(object sender, EventArgs e)
         {
             pole.Clear();
@@ -44,7 +43,6 @@ namespace Progect
             var API_user = new VkApi();
             int count = 0;
             string _user;
-
             if (druz.Checked == true)
             {
                 count = 0;
@@ -54,13 +52,20 @@ namespace Progect
                 {
                     Fields = VkNet.Enums.Filters.ProfileFields.All
                 });
+
+                var friend_id = API_user.Friends.GetAppUsers();
+
                 foreach (User user in friend)
                 {
                     _user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
                     pole.Text += _user;
                     _users.Add(_user);
                     count++;
-                }     
+                }
+                foreach (User user_id in friend)
+                {
+                    _users_id.Add(user_id.Id.ToString());
+                }
             }
             if (uch.Checked == true)
             {
