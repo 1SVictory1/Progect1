@@ -48,9 +48,8 @@ namespace Progect
 
             if (druz.Checked == true)
             {
-                
                 API_user.Authorize(new ApiAuthParams  
-                { AccessToken = Autoriz.getAuthForUser() });
+                { AccessToken = f1_pol });
                 var friend = API_user.Friends.Get(new VkNet.Model.RequestParams.FriendsGetParams
                 {
                     Fields = VkNet.Enums.Filters.ProfileFields.All
@@ -64,7 +63,7 @@ namespace Progect
             if (uch.Checked == true)
             {
                 API_group.Authorize(new ApiAuthParams    
-                { AccessToken = Autoriz.getAuthForGroups() });
+                { AccessToken = f1_group });
                 var follow = API_group.Groups.GetMembers(new GroupsGetMembersParams()
                 {
                     GroupId = "205674020",
