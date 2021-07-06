@@ -11,7 +11,7 @@ namespace Progect
     {
         public string getAuthForUser()
         {
-            string fileName = @"C://Users/Alex Elll/source/repos/Progect/Progect/bin/Debug/auth_VK.txt";
+            string fileName = @"auth_VK.txt";
             string token = "";
             try
             {
@@ -29,7 +29,7 @@ namespace Progect
         }
         public string getAuthForGroups()
         {
-            string fileName = @"C://Users/Alex Elll/source/repos/Progect/Progect/bin/Debug/auth_VK.txt";
+            string fileName = @"auth_VK.txt";
             string token = "";
             try
             {

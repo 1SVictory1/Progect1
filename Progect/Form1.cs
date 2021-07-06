@@ -23,9 +23,9 @@ namespace Progect
             button1.Enabled = false;
         }
         Autoriz aut = new Autoriz();
-        Form2 fr2 = new Form2();
         private void button1_Click(object sender, EventArgs e)
         {
+            Form2 fr2 = new Form2();
             if (pol.Checked == true)
             {
                 var API_user = new VkApi();
@@ -95,11 +95,6 @@ namespace Progect
             //var get = api_user.Wall.Get(new WallGetParams());
             //foreach (var wallPosts in get.WallPosts)
             //    Console.WriteLine(Encoding.Default.GetString(Encoding.UTF8.GetBytes(wallPosts.Text)));
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void sogl_CheckedChanged(object sender, EventArgs e)

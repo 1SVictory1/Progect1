@@ -27,7 +27,7 @@ namespace Progect
             vivod.Enabled = false;
         }
         Autoriz aut = new Autoriz();
-        Form3 fr3 = new Form3();
+
         private void vivod_Click(object sender, EventArgs e)
         {
             pole.Items.Clear();
@@ -80,6 +80,7 @@ namespace Progect
 
         private void dalee_Click(object sender, EventArgs e)
         {
+            Form3 fr3 = new Form3();
             this.Hide();
             fr3.Show();
         }

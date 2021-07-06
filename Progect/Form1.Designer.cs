@@ -70,7 +70,6 @@ namespace Progect
             this.grupp.TabStop = true;
             this.grupp.Text = "Группа";
             this.grupp.UseVisualStyleBackColor = true;
-            this.grupp.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // sogl
             // 
