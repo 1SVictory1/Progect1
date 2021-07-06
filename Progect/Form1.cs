@@ -21,6 +21,7 @@ namespace Progect
             InitializeComponent();
             pol.Checked = true;
             button1.Enabled = false;
+            grupp.Checked = false;
         }
         Autoriz aut = new Autoriz();
         private void button1_Click(object sender, EventArgs e)
