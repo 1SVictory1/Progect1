@@ -20,10 +20,7 @@ namespace Progect
             InitializeComponent();
         }
         Form2 fr2 = new Form2();
-        private void Form3_Load(object sender, EventArgs e)
-        {            
 
-        }
 
         private void nazad_Click(object sender, EventArgs e)
         {
@@ -38,9 +35,9 @@ namespace Progect
             { AccessToken = Autoriz.getAuthForUser() });
             var Wall = API_user.Wall.Get(new WallGetParams
             {
-                OwnerId = 213458891,
+                OwnerId = 208242814,
                 Extended = true,
-                Count = 2
+                Count = 1
             });
             foreach (VkNet.Model.Attachments.Post Post in Wall.WallPosts)
             {
