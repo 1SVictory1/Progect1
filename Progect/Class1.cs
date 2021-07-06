@@ -17,7 +17,6 @@ namespace Progect
             {
                 using (StreamReader sr = new StreamReader(fileName))
                 {
-                    sr.ReadLine();
                     token = sr.ReadLine();
                 }
             }
