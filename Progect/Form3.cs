@@ -15,18 +15,20 @@ namespace Progect
 {
     public partial class Form3 : Form
     {
-        string f2_pol;
-        string f2_group;
-        public Form3(string pol, string group)
+        string _pol;
+        string _group;
+        List<string> _users;
+        public Form3(string pol, string group, List<string> users)
         {
             InitializeComponent();
-            f2_pol = pol;
-            f2_group = group;
+            _pol = pol;
+            _group = group;
+            _users = users;
         }
 
         private void nazad_Click(object sender, EventArgs e)
         {
-            Form fr3 = new Form2(f2_pol, f2_group);
+            Form fr3 = new Form2(_pol, _group);
             this.Hide();
             fr3.Show();
         }
@@ -35,7 +37,7 @@ namespace Progect
         {
             var API_user = new VkApi();
             API_user.Authorize(new ApiAuthParams
-            { AccessToken = f2_pol });
+            { AccessToken = _pol });
             var Wall = API_user.Wall.Get(new WallGetParams
             {
                 OwnerId = 379204040,
@@ -52,7 +54,7 @@ namespace Progect
         {
             var API_group = new VkApi();
             API_group.Authorize(new ApiAuthParams
-            { AccessToken = f2_group });
+            { AccessToken = _group });
             var Wall = API_group.Wall.Get(new WallGetParams
             {
                 OwnerId = 205674020,

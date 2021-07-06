@@ -17,15 +17,15 @@ namespace Progect
 {
     public partial class Form2 : Form
     {
-        string f1_pol;
-        string f1_group;
+        string _pol;
+        string _group;
         public Form2(string pol, string group)
         {
             InitializeComponent();
-            f1_pol = pol;
-            f1_group = group;
+            _pol = pol;
+            _group = group;
         }
-
+        List<string> _users = new List<string> { };
         public Form2()
         {
             InitializeComponent();
@@ -43,14 +43,13 @@ namespace Progect
             var API_group = new VkApi();
             var API_user = new VkApi();
             int count = 0;
-            List<string> Users = new List<string> { };
             string _user;
 
             if (druz.Checked == true)
             {
                 count = 0;
                 API_user.Authorize(new ApiAuthParams  
-                { AccessToken = f1_pol });
+                { AccessToken = _pol });
                 var friend = API_user.Friends.Get(new VkNet.Model.RequestParams.FriendsGetParams
                 {
                     Fields = VkNet.Enums.Filters.ProfileFields.All
@@ -59,7 +58,7 @@ namespace Progect
                 {
                     _user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
                     pole.Text += _user;
-                    Users.Add(_user);
+                    _users.Add(_user);
                     count++;
                 }     
             }
@@ -67,7 +66,7 @@ namespace Progect
             {
                 count = 0;
                 API_group.Authorize(new ApiAuthParams    
-                { AccessToken = f1_group });
+                { AccessToken = _group });
                 var follow = API_group.Groups.GetMembers(new GroupsGetMembersParams()
                 {
                     GroupId = "205674020",
@@ -77,7 +76,7 @@ namespace Progect
                 {
                     _user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
                     pole.Text += _user;
-                    Users.Add(_user);
+                    _users.Add(_user);
                     count++;
                 }
             }
@@ -103,7 +102,7 @@ namespace Progect
 
         private void dalee_Click(object sender, EventArgs e)
         {
-            Form3 fr3 = new Form3(f1_pol,f1_group);
+            Form3 fr3 = new Form3(_pol, _group, _users);
             this.Hide();
             fr3.Show();
         }
