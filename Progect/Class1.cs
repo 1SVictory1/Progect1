@@ -9,9 +9,9 @@ namespace Progect
 {
     class Autoriz
     {
-        public string getAuthForUser()
+        public static string getAuthForUser()
         {
-            string fileName = "auth_VK.txt";
+            string fileName = @"C:/Users/alexa/source/repos/Git/Progect/auth_VK.txt";
             string token = "";
             try
             {
@@ -26,9 +26,9 @@ namespace Progect
             }
             return token;
         }
-        public string getAuthForGroups()
+        public static string getAuthForGroups()
         {
-            string fileName = @"auth_VK.txt";
+            string fileName = @"C:/Users/alexa/source/repos/Git/Progect/auth_VK.txt";
             string token = "";
             try
             {

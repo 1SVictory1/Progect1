@@ -23,17 +23,16 @@ namespace Progect
             button1.Enabled = false;
             
         }
-        Autoriz aut = new Autoriz();
+        Form2 fr2 = new Form2();
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 fr2 = new Form2();
             if (pol.Checked == true)
             {
                 var API_user = new VkApi();
                 try
                 {
                     API_user.Authorize(new ApiAuthParams
-                    { AccessToken = aut.getAuthForUser()});
+                    { AccessToken = Autoriz.getAuthForUser()});
                 }
                 catch (Exception r)
                 {
@@ -48,16 +47,16 @@ namespace Progect
                 try
                 {
                     API_group.Authorize(new ApiAuthParams
-                    { AccessToken = aut.getAuthForGroups() });
+                    { AccessToken = Autoriz.getAuthForGroups() });
                 }
                 catch (Exception r)
                 {
                     Console.WriteLine(r.Message);
                 }
+
                 this.Hide();
                 fr2.Show();               
             }
-
 
             //var api_group = new VkApi();
             //// обработать исключения!
