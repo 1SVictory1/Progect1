@@ -19,7 +19,8 @@ namespace Progect
         string _group;
         List<string> _users;
         String[] Users;
-        public Form3(string pol, string group, List<string> users)
+        List<string> _users_id;
+        public Form3(string pol, string group, List<string> users, List<string> users_id)
         {
             InitializeComponent();
             _pol = pol;
@@ -27,6 +28,8 @@ namespace Progect
             _users = users;
             Users = _users.ToArray();
             comboBox1.Items.AddRange(Users);
+            _users_id = users_id;
+
         }
 
         private void nazad_Click(object sender, EventArgs e)
