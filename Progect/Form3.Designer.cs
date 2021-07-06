@@ -40,20 +40,20 @@ namespace Progect
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(157, 11);
+            this.label1.Location = new System.Drawing.Point(177, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(568, 54);
+            this.label1.Size = new System.Drawing.Size(682, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "Управление публикациями";
             // 
             // nazad
             // 
             this.nazad.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nazad.Location = new System.Drawing.Point(34, 613);
-            this.nazad.Margin = new System.Windows.Forms.Padding(4);
+            this.nazad.Location = new System.Drawing.Point(38, 766);
+            this.nazad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nazad.Name = "nazad";
-            this.nazad.Size = new System.Drawing.Size(168, 60);
+            this.nazad.Size = new System.Drawing.Size(189, 75);
             this.nazad.TabIndex = 9;
             this.nazad.Text = "назад";
             this.nazad.UseVisualStyleBackColor = true;
@@ -62,10 +62,10 @@ namespace Progect
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(16, 158);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(18, 198);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(354, 75);
+            this.button1.Size = new System.Drawing.Size(398, 94);
             this.button1.TabIndex = 11;
             this.button1.Text = "публикации пользователя";
             this.button1.UseVisualStyleBackColor = true;
@@ -74,10 +74,10 @@ namespace Progect
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(16, 286);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(18, 358);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(354, 75);
+            this.button2.Size = new System.Drawing.Size(398, 94);
             this.button2.TabIndex = 12;
             this.button2.Text = "публикации сообщества";
             this.button2.UseVisualStyleBackColor = true;
@@ -85,25 +85,26 @@ namespace Progect
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(419, 116);
+            this.textBox1.Location = new System.Drawing.Point(471, 145);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(474, 281);
+            this.textBox1.Size = new System.Drawing.Size(533, 350);
             this.textBox1.TabIndex = 13;
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(941, 688);
+            this.ClientSize = new System.Drawing.Size(1059, 860);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nazad);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form3";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "API VK";
             this.ResumeLayout(false);
             this.PerformLayout();
