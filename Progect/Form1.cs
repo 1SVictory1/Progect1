@@ -23,10 +23,10 @@ namespace Progect
             button1.Enabled = false;
             grupp.Checked = false;
         }
-        Autoriz aut = new Autoriz();
+                    Form2 fr2 = new Form2();
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 fr2 = new Form2();
+            Autoriz aut = new Autoriz();
             if (pol.Checked == true)
             {
                 var API_user = new VkApi();
@@ -54,11 +54,11 @@ namespace Progect
                 {
                     Console.WriteLine(r.Message);
                 }
+
                 this.Hide();
                 fr2.Show();
 
             }
-
 
             //var api_group = new VkApi();
             //// обработать исключения!

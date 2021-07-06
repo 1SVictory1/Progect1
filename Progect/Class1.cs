@@ -26,7 +26,7 @@ namespace Progect
             }
             return token;
         }
-        public string getAuthForGroups()
+        public  string getAuthForGroups()
         {
             string fileName = @"auth_VK.txt";
             string token = "";
