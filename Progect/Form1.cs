@@ -19,7 +19,7 @@ namespace Progect
         public Form1()
         {
             InitializeComponent();
-            pol.Checked = true;
+            pol.Checked = false;
             button1.Enabled = false;
             grupp.Checked = false;
         }
