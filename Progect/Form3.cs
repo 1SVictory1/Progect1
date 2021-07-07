@@ -54,18 +54,18 @@ namespace Progect
             });
             foreach (VkNet.Model.Attachments.Post Post in Wall.WallPosts)
             {
-                try
-                {
-                    var Date = Post.Date;
-                    var Views_Count = Post.Views.Count;
-                    textBox1.Text += $"Пост от {Date}, Просмотров: {Views_Count}, \r\n \r\n";       
-                    textBox1.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(Post.Text)) + "\r\n";
-                }
-                catch (Exception r)
-                {
-                    MessageBox.Show("Нет доступа к стене  пользователя");
-                }
+                var Date = Post.Date;
+                string Check;
+                // обработка исключения
+                if (Post.Views == null)
+                    Check = "Нет информации";
+                else
+                    Check = Post.Views.Count.ToString();
+                textBox1.Text += $"Пост от {Post.Date}, Просмотров: {Check}, \r\n";
+                textBox1.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(Post.Text)) + "\r\n";
+                textBox1.Text += "============================================== \r\n \r\n";
             }
+
         }
     }
 }

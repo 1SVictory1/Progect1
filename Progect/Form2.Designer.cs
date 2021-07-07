@@ -42,10 +42,10 @@ namespace Progect
             // 
             this.uch.AutoSize = true;
             this.uch.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.uch.Location = new System.Drawing.Point(642, 130);
-            this.uch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uch.Location = new System.Drawing.Point(571, 104);
+            this.uch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uch.Name = "uch";
-            this.uch.Size = new System.Drawing.Size(495, 69);
+            this.uch.Size = new System.Drawing.Size(411, 58);
             this.uch.TabIndex = 5;
             this.uch.TabStop = true;
             this.uch.Text = "Список участников";
@@ -56,10 +56,10 @@ namespace Progect
             // 
             this.druz.AutoSize = true;
             this.druz.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.druz.Location = new System.Drawing.Point(739, 36);
-            this.druz.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.druz.Location = new System.Drawing.Point(657, 29);
+            this.druz.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.druz.Name = "druz";
-            this.druz.Size = new System.Drawing.Size(398, 69);
+            this.druz.Size = new System.Drawing.Size(329, 58);
             this.druz.TabIndex = 4;
             this.druz.TabStop = true;
             this.druz.Text = "Список друзей";
@@ -69,10 +69,10 @@ namespace Progect
             // vivod
             // 
             this.vivod.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.vivod.Location = new System.Drawing.Point(641, 234);
-            this.vivod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.vivod.Location = new System.Drawing.Point(570, 187);
+            this.vivod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.vivod.Name = "vivod";
-            this.vivod.Size = new System.Drawing.Size(496, 75);
+            this.vivod.Size = new System.Drawing.Size(441, 60);
             this.vivod.TabIndex = 6;
             this.vivod.Text = "вывод";
             this.vivod.UseVisualStyleBackColor = true;
@@ -81,10 +81,10 @@ namespace Progect
             // dalee
             // 
             this.dalee.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dalee.Location = new System.Drawing.Point(962, 629);
-            this.dalee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dalee.Location = new System.Drawing.Point(855, 503);
+            this.dalee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dalee.Name = "dalee";
-            this.dalee.Size = new System.Drawing.Size(189, 75);
+            this.dalee.Size = new System.Drawing.Size(168, 60);
             this.dalee.TabIndex = 8;
             this.dalee.Text = "далее";
             this.dalee.UseVisualStyleBackColor = true;
@@ -92,21 +92,20 @@ namespace Progect
             // 
             // pole
             // 
-            this.pole.Location = new System.Drawing.Point(32, 104);
-            this.pole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pole.Location = new System.Drawing.Point(28, 83);
             this.pole.Multiline = true;
             this.pole.Name = "pole";
             this.pole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.pole.Size = new System.Drawing.Size(409, 599);
+            this.pole.Size = new System.Drawing.Size(364, 480);
             this.pole.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(27, 9);
+            this.label2.Location = new System.Drawing.Point(24, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 29);
+            this.label2.Size = new System.Drawing.Size(165, 25);
             this.label2.TabIndex = 11;
             this.label2.Text = "Всего человек:";
             // 
@@ -114,17 +113,17 @@ namespace Progect
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(27, 58);
+            this.label1.Location = new System.Drawing.Point(24, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 29);
+            this.label1.Size = new System.Drawing.Size(244, 25);
             this.label1.TabIndex = 13;
             this.label1.Text = "Друзья пользователя:";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 749);
+            this.ClientSize = new System.Drawing.Size(1052, 599);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pole);
@@ -132,9 +131,9 @@ namespace Progect
             this.Controls.Add(this.vivod);
             this.Controls.Add(this.uch);
             this.Controls.Add(this.druz);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "API VK";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
