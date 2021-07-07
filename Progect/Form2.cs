@@ -85,7 +85,7 @@ namespace Progect
                 }
             }
             label2.Text = "Всего человек:  " + count;
-            if ((druz.Checked == true | uch.Checked == true) && pole.Text != "") dalee.Enabled = true;
+            if (druz.Checked == true && pole.Text != "") dalee.Enabled = true;
             else dalee.Enabled = false;
         } 
 
