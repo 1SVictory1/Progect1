@@ -47,6 +47,7 @@ namespace Progect
 
             if (druz.Checked == true)
             {
+                label1.Text = "Друзья пользователя: ";
                 count = 0;
                 // считывание информации о друзьях пользователя
                 API_user.Authorize(new ApiAuthParams  
@@ -68,12 +69,13 @@ namespace Progect
                 foreach (var inf in user_inf)
                 {
                     string name_user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(inf.FirstName + " " + inf.LastName));
-                    textBox1.Text += name_user;
+                    label1.Text += name_user;
                 }
             }
             // получение информации о подписчиках сообщества
             if (uch.Checked == true)
             {
+                label1.Text = "Название сообщества: ";
                 count = 0;
                 API_group.Authorize(new ApiAuthParams    
                 { AccessToken = _group });
@@ -94,7 +96,7 @@ namespace Progect
                 foreach (Group inf in group_inf)
                 {
                     string name = inf.Name;
-                    textBox1.Text += name;
+                    label1.Text += name;
                 }
 
             }
