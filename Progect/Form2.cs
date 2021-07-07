@@ -35,6 +35,7 @@ namespace Progect
         private void Form2_Load(object sender, EventArgs e)
         {
             vivod.Enabled = false;
+            dalee.Enabled = false;
         }
         private void vivod_Click(object sender, EventArgs e)
         {
@@ -84,6 +85,8 @@ namespace Progect
                 }
             }
             label2.Text = "Всего человек:  " + count;
+            if ((druz.Checked == true | uch.Checked == true) && pole.Text != "") dalee.Enabled = true;
+            else dalee.Enabled = false;
         } 
 
         private void druz_CheckedChanged(object sender, EventArgs e)
