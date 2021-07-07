@@ -73,9 +73,6 @@ namespace Progect
                     GroupId = "205674020",
                     Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl
                 });
-                var groups = API_group.Groups.GetById(null, null, null);
-                var dg = groups[0];
-                MessageBox.Show(dg.ToString());
                 foreach (User user in follow)
                 {
                     _user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
