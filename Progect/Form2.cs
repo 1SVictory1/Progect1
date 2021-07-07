@@ -109,7 +109,7 @@ namespace Progect
 
         private void druz_CheckedChanged(object sender, EventArgs e)
         {
-            if (uch.Checked == true || druz.Checked == true)
+            if ((uch.Checked == true || druz.Checked == true) && textBox1.Text != "" && textBox2.Text != "")
             {
                 vivod.Enabled = true;
             }
@@ -118,18 +118,27 @@ namespace Progect
 
         private void uch_CheckedChanged(object sender, EventArgs e)
         {
-            if ((uch.Checked == true || druz.Checked == true))
+            if ((uch.Checked == true || druz.Checked == true) && textBox1.Text != "" && textBox2.Text != "")
             {
                 vivod.Enabled = true;
             }
             else vivod.Enabled = false;
         }
-
+        private void TextBoxes_TestChanged(object sender, EventArgs e)
+        {
+            if ((uch.Checked == true || druz.Checked == true) && textBox1.Text != "" && textBox2.Text != "")
+            {
+                vivod.Enabled = true;
+            }
+            else vivod.Enabled = false;
+        }
         private void dalee_Click(object sender, EventArgs e)
         {
             Form3 fr3 = new Form3(_pol, _group, _users, _users_id);
             this.Hide();
             fr3.Show();
         }
+
+
     }
 }
