@@ -40,7 +40,7 @@ namespace Progect
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(66, 416);
+            this.button1.Location = new System.Drawing.Point(303, 396);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(409, 89);
@@ -53,8 +53,8 @@ namespace Progect
             // 
             this.sogl.AutoSize = true;
             this.sogl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sogl.Location = new System.Drawing.Point(66, 359);
-            this.sogl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sogl.Location = new System.Drawing.Point(219, 321);
+            this.sogl.Margin = new System.Windows.Forms.Padding(4);
             this.sogl.Name = "sogl";
             this.sogl.Size = new System.Drawing.Size(597, 28);
             this.sogl.TabIndex = 4;
@@ -109,7 +109,7 @@ namespace Progect
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sogl);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "API VK";

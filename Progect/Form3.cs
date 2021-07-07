@@ -30,16 +30,13 @@ namespace Progect
             Users = _users.ToArray();
             comboBox1.Items.AddRange(Users);
             _users_id = users_id;
-
         }
-
         private void nazad_Click(object sender, EventArgs e)
         {
             Form fr3 = new Form2(_pol, _group);
             this.Hide();
             fr3.Show();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Clear();

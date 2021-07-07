@@ -19,9 +19,8 @@ namespace Progect
         public Form1()
         {
             InitializeComponent();
-            
+
             button1.Enabled = false;
-            
         }
         string pol;
         string group;
@@ -32,38 +31,7 @@ namespace Progect
             Form fr2 = new Form2(pol, group);
             this.Hide();
             fr2.Show();
-
-            //var API_user = new VkApi();
-            //try
-            //{
-            //    API_user.Authorize(new ApiAuthParams
-            //    { AccessToken = Autoriz.getAuthForUser() });
-            //}
-            //catch (Exception r)
-            //{
-            //    Console.WriteLine(r.Message);
-            //}
-            //this.Hide();
-            //fr2.Show();
-
-
-
-            //var API_group = new VkApi();
-            //try
-            //{
-            //    API_group.Authorize(new ApiAuthParams
-            //    { AccessToken = Autoriz.getAuthForGroups() });
-            //}
-            //catch (Exception r)
-            //{
-            //    Console.WriteLine(r.Message);
-            //}
-            //this.Hide();
-            //fr2.Show();
-
         }
-        
-
         private void sogl_CheckedChanged(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "" && sogl.Checked == true)
