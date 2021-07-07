@@ -73,20 +73,21 @@ namespace Progect
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(624, 89);
+            this.textBox1.Location = new System.Drawing.Point(593, 89);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(500, 448);
+            this.textBox1.Size = new System.Drawing.Size(500, 584);
             this.textBox1.TabIndex = 13;
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(112, 116);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(329, 24);
+            this.comboBox1.Size = new System.Drawing.Size(329, 33);
             this.comboBox1.TabIndex = 14;
             // 
             // Form3
