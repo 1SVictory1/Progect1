@@ -35,6 +35,7 @@ namespace Progect
             this.dalee = new System.Windows.Forms.Button();
             this.pole = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // uch
@@ -108,11 +109,20 @@ namespace Progect
             this.label2.TabIndex = 11;
             this.label2.Text = "Всего человек:";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(556, 266);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(352, 133);
+            this.textBox1.TabIndex = 12;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 599);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pole);
             this.Controls.Add(this.dalee);
@@ -136,5 +146,6 @@ namespace Progect
         private System.Windows.Forms.Button dalee;
         private System.Windows.Forms.TextBox pole;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

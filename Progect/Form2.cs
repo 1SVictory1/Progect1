@@ -64,6 +64,12 @@ namespace Progect
                     _users_id.Add(user.Id.ToString());
                     count++;
                 }
+                var user_inf = API_user.Users.Get(new long[] { 379204040 });
+                foreach (var inf in user_inf)
+                {
+                    string name_user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(inf.FirstName + " " + inf.LastName));
+                    textBox1.Text += name_user;
+                }
             }
             // получение информации о подписчиках сообщества
             if (uch.Checked == true)
@@ -83,7 +89,14 @@ namespace Progect
                     _users.Add(_user);
                     count++;
                 }
-                var  = API_group.Groups.GetMembers(new GroupsGetMembersParams()
+
+                var group_inf = API_group.Groups.GetById(null, "205674020", null);
+                foreach (Group inf in group_inf)
+                {
+                    string name = inf.Name;
+                    textBox1.Text += name;
+                }
+
             }
 
             label2.Text = "Всего человек:  " + count;
