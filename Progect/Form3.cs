@@ -65,6 +65,8 @@ namespace Progect
                 {
                     MessageBox.Show("Нет доступа к стене  пользователя");
                 }
+
+
             }
         }
     }
