@@ -41,6 +41,8 @@ namespace Progect
         {
             textBox1.Clear();
             Number_user = comboBox1.SelectedIndex;
+            // считывание информации о постах конкретного пользователя из списка друзей,
+            // который был получен из прошлой формы
             var API_user = new VkApi();
             API_user.Authorize(new ApiAuthParams
             { AccessToken = _pol });
@@ -52,8 +54,17 @@ namespace Progect
             });
             foreach (VkNet.Model.Attachments.Post Post in Wall.WallPosts)
             {
-                textBox1.Text += $"Пост от {Post.Date}, Просмотров: {Post.Views.Count}, \r\n \r\n";
-                textBox1.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(Post.Text)) + "\r\n";
+                try
+                {
+                    var Date = Post.Date;
+                    var Views_Count = Post.Views.Count;
+                    textBox1.Text += $"Пост от {Date}, Просмотров: {Views_Count}, \r\n \r\n";
+                    textBox1.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(Post.Text)) + "\r\n";
+                }
+                catch (Exception r)
+                {
+                    MessageBox.Show("Нет доступа к стене  пользователя");
+                }
             }
         }
     }

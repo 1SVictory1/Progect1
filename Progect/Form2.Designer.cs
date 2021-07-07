@@ -34,6 +34,7 @@ namespace Progect
             this.vivod = new System.Windows.Forms.Button();
             this.dalee = new System.Windows.Forms.Button();
             this.pole = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uch
@@ -67,7 +68,7 @@ namespace Progect
             // vivod
             // 
             this.vivod.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.vivod.Location = new System.Drawing.Point(531, 175);
+            this.vivod.Location = new System.Drawing.Point(518, 158);
             this.vivod.Margin = new System.Windows.Forms.Padding(4);
             this.vivod.Name = "vivod";
             this.vivod.Size = new System.Drawing.Size(441, 60);
@@ -90,18 +91,29 @@ namespace Progect
             // 
             // pole
             // 
-            this.pole.Location = new System.Drawing.Point(28, 27);
+            this.pole.Location = new System.Drawing.Point(28, 83);
             this.pole.Multiline = true;
             this.pole.Name = "pole";
             this.pole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.pole.Size = new System.Drawing.Size(364, 536);
+            this.pole.Size = new System.Drawing.Size(364, 480);
             this.pole.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(45, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(217, 31);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Всего человек:";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 599);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pole);
             this.Controls.Add(this.dalee);
             this.Controls.Add(this.vivod);
@@ -123,5 +135,6 @@ namespace Progect
         private System.Windows.Forms.Button vivod;
         private System.Windows.Forms.Button dalee;
         private System.Windows.Forms.TextBox pole;
+        private System.Windows.Forms.Label label2;
     }
 }

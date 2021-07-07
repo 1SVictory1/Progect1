@@ -25,8 +25,8 @@ namespace Progect
             _pol = pol;
             _group = group;
         }
-        List<string> _users = new List<string> { };
-        List<string> _users_id = new List<string> { };
+        List<string> _users = new List<string> { }; // список с именами друзей пользователя
+        List<string> _users_id = new List<string> { }; // список с id друзей пользователя 
         public Form2()
         {
             InitializeComponent();
@@ -47,13 +47,14 @@ namespace Progect
             if (druz.Checked == true)
             {
                 count = 0;
+                // считывание информации о друзьях пользователя
                 API_user.Authorize(new ApiAuthParams  
                 { AccessToken = _pol });
                 var friend = API_user.Friends.Get(new VkNet.Model.RequestParams.FriendsGetParams
                 {
                     Fields = VkNet.Enums.Filters.ProfileFields.All
                 });
-
+                // получение имени, фамилии и id друзей и запись их в список
                 foreach (User user in friend)
                 {
                     _user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(user.FirstName + " " + user.LastName + "\r\n"));
@@ -63,6 +64,7 @@ namespace Progect
                     count++;
                 }
             }
+            // получение информации о подписчиках сообщества
             if (uch.Checked == true)
             {
                 count = 0;
@@ -81,6 +83,7 @@ namespace Progect
                     count++;
                 }
             }
+            label2.Text = "Всего человек:  " + count;
         } 
 
         private void druz_CheckedChanged(object sender, EventArgs e)

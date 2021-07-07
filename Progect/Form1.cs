@@ -26,8 +26,8 @@ namespace Progect
         string group;
         private void button1_Click(object sender, EventArgs e)
         {
-            pol = textBox1.Text;
-            group = textBox2.Text;
+            pol = textBox1.Text; // считывание токена пользователя
+            group = textBox2.Text; // считывание токена сообщества
             Form fr2 = new Form2(pol, group);
             this.Hide();
             fr2.Show();
