@@ -40,6 +40,15 @@ namespace Progect
             }
             else button1.Enabled = false;
         }
+        private void textBoxes_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && sogl.Checked == true)
+            {
+                button1.Enabled = true;
+            }
+            else button1.Enabled = false;
+        }
+         
     }
 }
 
