@@ -58,15 +58,13 @@ namespace Progect
                 {
                     var Date = Post.Date;
                     var Views_Count = Post.Views.Count;
-                    textBox1.Text += $"Пост от {Date}, Просмотров: {Views_Count}, \r\n \r\n";
+                    textBox1.Text += $"Пост от {Date}, Просмотров: {Views_Count}, \r\n \r\n";       
                     textBox1.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(Post.Text)) + "\r\n";
                 }
                 catch (Exception r)
                 {
                     MessageBox.Show("Нет доступа к стене  пользователя");
                 }
-
-
             }
         }
     }

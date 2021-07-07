@@ -83,7 +83,9 @@ namespace Progect
                     _users.Add(_user);
                     count++;
                 }
+                var  = API_group.Groups.GetMembers(new GroupsGetMembersParams()
             }
+
             label2.Text = "Всего человек:  " + count;
             if ((druz.Checked == true | uch.Checked == true) && pole.Text != "") dalee.Enabled = true;
             else dalee.Enabled = false;
