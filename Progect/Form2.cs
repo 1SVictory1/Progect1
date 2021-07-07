@@ -44,7 +44,8 @@ namespace Progect
             var API_user = new VkApi();
             int count = 0;
             string _user;
-
+            int _user_read_id = Convert.ToInt32(textBox1.Text);
+            string _group_read_id = textBox2.Text;
             if (druz.Checked == true)
             {
                 label1.Text = "Друзья пользователя: ";
@@ -65,7 +66,7 @@ namespace Progect
                     _users_id.Add(user.Id.ToString());
                     count++;
                 }
-                var user_inf = API_user.Users.Get(new long[] { 379204040 });
+                var user_inf = API_user.Users.Get(new long[] { _user_read_id });
                 foreach (var inf in user_inf)
                 {
                     string name_user = Encoding.UTF8.GetString(Encoding.Default.GetBytes(inf.FirstName + " " + inf.LastName));
@@ -81,7 +82,7 @@ namespace Progect
                 { AccessToken = _group });
                 var follow = API_group.Groups.GetMembers(new GroupsGetMembersParams()
                 {
-                    GroupId = "205674020",
+                    GroupId = _group_read_id,
                     Fields = VkNet.Enums.Filters.UsersFields.FirstNameAbl
                 });
                 foreach (User user in follow)
@@ -92,7 +93,7 @@ namespace Progect
                     count++;
                 }
 
-                var group_inf = API_group.Groups.GetById(null, "205674020", null);
+                var group_inf = API_group.Groups.GetById(null, _group_read_id, null);
                 foreach (Group inf in group_inf)
                 {
                     string name = inf.Name;

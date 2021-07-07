@@ -65,7 +65,6 @@ namespace Progect
                 textBox1.Text += Encoding.UTF8.GetString(Encoding.Default.GetBytes(Post.Text)) + "\r\n";
                 textBox1.Text += "============================================== \r\n \r\n";
             }
-
         }
     }
 }
